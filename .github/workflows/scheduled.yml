@@ -3,6 +3,8 @@ permissions:
   contents: write
 
 on:
+  schedule:
+    - cron: '*/5 * * * *'
   # Allows manual trigger from the Actions tab and GitHub API
   workflow_dispatch:
     inputs:
