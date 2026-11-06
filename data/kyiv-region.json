@@ -1,6 +1,6 @@
 {
   "regionId": "kyiv-region",
-  "lastUpdated": "2026-11-06T19:05:42.125Z",
+  "lastUpdated": "2026-11-06T19:10:35.508Z",
   "fact": {
     "data": {
       "1793916000": {
@@ -27,8 +27,8 @@
           "20": "no",
           "21": "no",
           "22": "no",
-          "23": "yes",
-          "24": "yes"
+          "23": "no",
+          "24": "no"
         },
         "GPV1.2": {
           "1": "no",
@@ -53,8 +53,8 @@
           "20": "no",
           "21": "no",
           "22": "no",
-          "23": "yes",
-          "24": "yes"
+          "23": "no",
+          "24": "no"
         },
         "GPV2.1": {
           "1": "no",
@@ -341,7 +341,7 @@
           "20": "no",
           "21": "no",
           "22": "no",
-          "23": "first",
+          "23": "yes",
           "24": "yes"
         },
         "GPV1.2": {
@@ -367,7 +367,7 @@
           "20": "no",
           "21": "no",
           "22": "no",
-          "23": "first",
+          "23": "yes",
           "24": "yes"
         },
         "GPV2.1": {
@@ -393,7 +393,7 @@
           "20": "no",
           "21": "no",
           "22": "no",
-          "23": "yes",
+          "23": "first",
           "24": "yes"
         },
         "GPV2.2": {
@@ -419,7 +419,7 @@
           "20": "no",
           "21": "no",
           "22": "no",
-          "23": "yes",
+          "23": "first",
           "24": "yes"
         },
         "GPV3.1": {
@@ -632,7 +632,7 @@
         }
       }
     },
-    "update": "06.11.2026 19:28",
+    "update": "06.11.2026 21:07",
     "today": 1793916000
   },
   "preset": {
@@ -3009,19 +3009,19 @@
         }
       }
     },
-    "updateFact": "06.11.2026 19:28"
+    "updateFact": "06.11.2026 21:07"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-06T19:05:42.125Z",
-    "attempt": 51647
+    "at": "2026-11-06T19:10:35.508Z",
+    "attempt": 51648
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "49b3bf04178aaa1217cddd4562e8eca1dfcfbda204ab2a9badfa16117c185e9f"
+    "contentHash": "b38d4b04d52bb74d6d34c9f1d128d31a66cb6636141cd0b6d034ebe5547bb62d"
   },
   "emergency": {
     "active": false,
