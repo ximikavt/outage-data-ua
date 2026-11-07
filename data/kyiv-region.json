@@ -1,6 +1,6 @@
 {
   "regionId": "kyiv-region",
-  "lastUpdated": "2026-11-07T07:35:38.184Z",
+  "lastUpdated": "2026-11-07T07:40:31.252Z",
   "fact": {
     "data": {
       "1794002400": {
@@ -40,8 +40,8 @@
           "7": "no",
           "8": "no",
           "9": "no",
-          "10": "no",
-          "11": "no",
+          "10": "first",
+          "11": "yes",
           "12": "no",
           "13": "yes",
           "14": "yes",
@@ -318,7 +318,7 @@
         }
       }
     },
-    "update": "06.11.2026 23:23",
+    "update": "07.11.2026 09:34",
     "today": 1794002400
   },
   "preset": {
@@ -2695,19 +2695,19 @@
         }
       }
     },
-    "updateFact": "06.11.2026 23:23"
+    "updateFact": "07.11.2026 09:34"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-07T07:35:38.183Z",
-    "attempt": 51797
+    "at": "2026-11-07T07:40:31.252Z",
+    "attempt": 51798
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "352e74f5ca76fe87b2bf53a947eb0b0b52f4bba0327766e809dba0c9a12c9398"
+    "contentHash": "230fbf84e6b7c3a4acf8ded287e33fa2799b6a2432edfa133f9bc5737e2de569"
   },
   "emergency": {
     "active": false,
