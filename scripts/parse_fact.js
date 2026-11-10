@@ -207,7 +207,7 @@ function logFactSummary(regionId, fact) {
   const dayKeys = Object.keys(data).sort((a, b) => Number(a) - Number(b));
   const groupCounts = Object.fromEntries(dayKeys.map(day => [
     day,
-    isObject(data[day]) ? Object.keys(data[day]).filter(key => /^GPV\d+\.\d+$/i.test(key)).length : 0,
+    isObject(data[day]) ? Object.keys(data[day]).filter(key => /^GPV\d+\.\d+(?:\.\d+)?$/i.test(key)).length : 0,
   ]));
   const today = fact?.today ?? null;
   const summary = { region: regionId, today, update: fact?.update ?? null, dayKeys, groupCounts };
@@ -263,11 +263,11 @@ function toKyivIso(dateStr, timeStr) {
 }
 
 function extractGroupsWithIso(data) {
-  // Keep only keys that look like group identifiers (e.g., GPV1.1, GPV4.1)
+  // Keep only keys that look like group identifiers, optionally including a line number.
   const out = {};
   if (!isObject(data)) return null;
   const keys = Object.keys(data);
-  const groupKeyRe = /^[A-ZА-Я]{2,}\d+\.\d+$/i; // broad match
+  const groupKeyRe = /^[A-ZА-Я]{2,}\d+\.\d+(?:\.\d+)?$/i; // broad match
   for (const k of keys) {
     const v = data[k];
     if (!groupKeyRe.test(k)) continue;

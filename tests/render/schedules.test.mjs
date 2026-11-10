@@ -23,14 +23,14 @@ after(async () => {
   if (server) await new Promise(resolve => server.close(resolve));
 });
 
-async function view(template, data, check, day = 'today') {
+async function view(template, data, check, day = 'today', groupKey = gpv) {
   // Date rendering must be independent of the host/browser timezone.
   const context = await browser.newContext({ locale: 'en-US', timezoneId: 'America/Los_Angeles' });
   const page = await context.newPage();
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
   try {
-    await page.addInitScript(({ data, gpv }) => { window.__SCHEDULE__ = data; window.__GPV_KEY__ = gpv; }, { data, gpv });
+    await page.addInitScript(({ data, gpv }) => { window.__SCHEDULE__ = data; window.__GPV_KEY__ = gpv; }, { data, gpv: groupKey });
     await page.goto(`${baseURL}/templates/html/${template}?day=${day}`);
     const selector = template === 'summary-item.html' ? '.summary-card' : template === 'groups-template.html' || template === 'week-template.html' ? '#matrix' : '#today';
     await page.waitForSelector(`${selector}[data-schedule-ready="true"]`, { timeout: 3000 });
@@ -104,6 +104,30 @@ test('all-groups matrix includes missing groups from a partially published day',
     assert.equal(await page.locator('td.state-yes').count(), 24);
     assert.match(await page.locator('tr[data-schedule-status="missing"]').textContent(), /46\.1.*Дані графіка відсутні/);
   });
+});
+
+test('all-groups matrix renders line-level schedules separately', async () => {
+  const fixture = withSchedule(allYes());
+  fixture.fact.data[today] = { 'GPV45.1.1': allYes() };
+  fixture.preset = {
+    ...incident.preset,
+    data: {
+      'GPV45.1.1': incident.preset.data[gpv],
+      'GPV45.1.2': incident.preset.data[gpv],
+    },
+  };
+  await view('groups-template.html', fixture, async page => {
+    const rows = page.locator('#matrix tbody tr');
+    assert.equal(await rows.count(), 2);
+    assert.equal(await rows.nth(0).locator('th').first().textContent(), 'Група 45.1, лінія 1');
+    assert.equal(await rows.nth(0).getAttribute('data-schedule-status'), 'complete');
+    assert.equal(await rows.nth(1).locator('th').first().textContent(), 'Група 45.1, лінія 2');
+    assert.equal(await rows.nth(1).getAttribute('data-schedule-status'), 'missing');
+  });
+  await view('summary-item.html', fixture, async page => {
+    assert.equal(await page.locator('.group-badge-left').textContent(), '45.1 лінія 1');
+    assert.equal(await page.locator('.summary-status').textContent(), 'світло буде весь день');
+  }, 'today', 'GPV45.1.1');
 });
 
 test('known outage slots preserve icons and half-hour intervals', async () => {

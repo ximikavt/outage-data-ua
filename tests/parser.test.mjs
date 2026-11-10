@@ -42,6 +42,31 @@ test('parser preserves source facts and reports missing current-day data', async
   }
 });
 
+test('parser counts line-level groups in the daily fact summary', async () => {
+  const dir = await mkdtemp(path.join(tmpdir(), 'outage-parser-'));
+  try {
+    const fact = {
+      ...incident.fact,
+      data: {
+        [incident.fact.today]: {
+          'GPV1.1.1': { '1': 'yes' },
+          'GPV1.1.2': { '1': 'no' },
+        },
+      },
+    };
+    const input = path.join(dir, 'source.html');
+    const output = path.join(dir, 'out.json');
+    await writeFile(input, `<script>DisconSchedule.fact = ${JSON.stringify(fact)};</script>`);
+    const result = spawnSync(process.execPath, [path.join(root, 'scripts/parse_fact.js'), '--region', 'kyiv', '--in', input, '--out', output], { encoding: 'utf8' });
+    assert.equal(result.status, 0, result.stderr);
+    assert.deepEqual(JSON.parse(await readFile(output, 'utf8')).fact, fact);
+    const summary = JSON.parse(result.stdout.split('\n').find(line => line.startsWith('[INFO] Fact summary ')).slice('[INFO] Fact summary '.length));
+    assert.equal(summary.groupCounts[String(incident.fact.today)], 2);
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
 // Announcement markup as published by the provider (trimmed from real snapshots of 04.11.2026).
 const attention = inner => `<div class="m-attention__body" style="padding-top: 37px">
   <div class="m-attention__text">${inner}</div>

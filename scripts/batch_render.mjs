@@ -48,13 +48,13 @@ function normalizeRegionId(json, fileStem) {
 }
 
 function gpvToFileName(gpvKey) {
-  // GPV1.2 -> gpv-1-2.png
-  const m = String(gpvKey).match(/^GPV(\d+)\.(\d+)$/i);
+  // GPV1.2 -> gpv-1-2.png; GPV1.2.3 -> gpv-1-2-line-3.png
+  const m = String(gpvKey).match(/^GPV(\d+)\.(\d+)(?:\.(\d+))?$/i);
   if (!m) {
     // fallback: sanitize
     return `gpv-${String(gpvKey).replace(/[^a-z0-9]+/gi, '-').toLowerCase()}.png`;
   }
-  return `gpv-${m[1]}-${m[2]}.png`;
+  return m[3] ? `gpv-${m[1]}-${m[2]}-line-${m[3]}.png` : `gpv-${m[1]}-${m[2]}.png`;
 }
 
 async function fileExists(p) {
@@ -141,7 +141,7 @@ async function runParallel(tasks, concurrency) {
       }
 
       const presetData = json?.preset?.data || {};
-      const gpvKeys = Object.keys(presetData).filter(k => /^GPV\d+\.\d+$/i.test(k)).sort((a, b) => {
+      const gpvKeys = Object.keys(presetData).filter(k => /^GPV\d+\.\d+(?:\.\d+)?$/i.test(k)).sort((a, b) => {
         const pa = a.match(/\d+|\.|/g)?.join('') || '';
         const pb = b.match(/\d+|\.|/g)?.join('') || '';
         return pa.localeCompare(pb, 'en', { numeric: true });

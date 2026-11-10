@@ -6,6 +6,24 @@
 (function () {
   'use strict';
 
+  function isGpvKey(key) {
+    return /^GPV\d+\.\d+(?:\.\d+)?$/i.test(String(key));
+  }
+
+  function displayGroupName(name) {
+    return String(name || '').replace(/^Черга(?=\s|:|$)/u, 'Група');
+  }
+
+  function groupLabel(gpvKey, name) {
+    const label = displayGroupName(name);
+    if (label) return label;
+    const match = String(gpvKey || '').match(/^GPV(\d+)\.(\d+)(?:\.(\d+))?$/i);
+    if (!match) return '';
+    return match[3]
+      ? `Група ${match[1]}.${match[2]}, лінія ${match[3]}`
+      : `Група ${match[1]}.${match[2]}`;
+  }
+
   function initThemeFromQuery() {
     try {
       const qs = new URLSearchParams(location.search);
@@ -21,7 +39,7 @@
     } catch (e) { }
     if (window.__GPV_KEY__ && data?.preset?.data && data.preset.data[window.__GPV_KEY__]) return window.__GPV_KEY__;
     const keys = Object.keys(data?.preset?.data || {});
-    const firstGpv = keys.find(k => /^GPV\d+\.\d+$/.test(k));
+    const firstGpv = keys.find(isGpvKey);
     return firstGpv || 'GPV1.2';
   }
 
@@ -351,21 +369,14 @@
     if (anchor) anchor.after(box); else container.prepend(box);
   }
 
-  function displayGroupName(name) {
-    return String(name || '').replace(/^Черга(?=\s|:|$)/u, 'Група');
-  }
-
   function injectGroupBadgeIfPresent(data, gpvKey) {
     try {
       const h1 = document.querySelector('.container > h1');
       if (h1) {
         const names = data?.preset?.sch_names || {};
-        let label = displayGroupName(names[gpvKey] || '');
+        let label = groupLabel(gpvKey, names[gpvKey]);
         if (label) {
           label = label.replace(/^Група(?=\s|:|$)\s*:?\s*/u, 'Група: ');
-        } else if (gpvKey) {
-          const m = String(gpvKey).match(/^GPV(\d+)\.(\d+)$/);
-          if (m) label = `Група: ${m[1]}.${m[2]}`;
         }
         if (label) {
           let badge = h1.querySelector('.group-badge');
@@ -551,14 +562,12 @@
     // Determine target epoch and the set of groups present
     const epochStr = targetEpoch != null ? String(targetEpoch) : null;
     const dayObj = (epochStr && fact && fact.data) ? fact.data[epochStr] : null;
-    const dayGroups = Object.keys(dayObj || {}).filter(k => /^GPV\d+\.\d+$/.test(k));
+    const dayGroups = Object.keys(dayObj || {}).filter(isGpvKey);
     // A partially published day must not hide groups whose factual schedule is missing.
     const gpvKeys = dayGroups.length ? [...new Set([
-      ...Object.keys(preset.data || {}).filter(k => /^GPV\d+\.\d+$/.test(k)), ...dayGroups
+      ...Object.keys(preset.data || {}).filter(isGpvKey), ...dayGroups
     ])].sort((a, b) => {
-      const pa = a.match(/\d+|\.|/g)?.join('') || '';
-      const pb = b.match(/\d+|\.|/g)?.join('') || '';
-      return pa.localeCompare(pb, 'en', { numeric: true });
+      return a.localeCompare(b, 'en', { numeric: true });
     }) : [];
 
     const thead = document.createElement('thead');
@@ -600,7 +609,7 @@
     for (const gpvKey of gpvKeys) {
       const tr = document.createElement('tr');
       const th = document.createElement('th');
-      th.textContent = displayGroupName(names[gpvKey]) || gpvKey.replace(/^GPV/, 'Група ');
+      th.textContent = groupLabel(gpvKey, names[gpvKey]);
       tr.appendChild(th);
 
       const schedule = factSchedule(fact, targetEpoch, gpvKey);
@@ -624,15 +633,15 @@
   }
 
   function extractGroupNumber(gpvKey, names) {
-    // Return string like "1.2" from GPV1.2 or from the sch_names label
+    // Return the group and optional line number for a summary badge.
     if (gpvKey) {
-      const m = String(gpvKey).match(/^GPV(\d+)\.(\d+)$/);
-      if (m) return `${m[1]}.${m[2]}`;
+      const m = String(gpvKey).match(/^GPV(\d+)\.(\d+)(?:\.(\d+))?$/i);
+      if (m) return m[3] ? `${m[1]}.${m[2]} лінія ${m[3]}` : `${m[1]}.${m[2]}`;
     }
     const label = names && gpvKey ? names[gpvKey] : '';
     if (label) {
-      const mm = label.match(/(\d+)\.(\d+)/);
-      if (mm) return `${mm[1]}.${mm[2]}`;
+      const mm = label.match(/(\d+\.\d+)(?:\D{0,20}ліні[яї]\s*№?\s*(\d+))?/iu);
+      if (mm) return mm[2] ? `${mm[1]} лінія ${mm[2]}` : mm[1];
     }
     return '';
   }
