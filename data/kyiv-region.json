@@ -1,6 +1,6 @@
 {
   "regionId": "kyiv-region",
-  "lastUpdated": "2026-11-20T23:20:50.233Z",
+  "lastUpdated": "2026-11-20T23:25:38.547Z",
   "fact": {
     "data": {
       "1795212000": {
@@ -11,7 +11,7 @@
           "4": "yes",
           "5": "yes",
           "6": "yes",
-          "7": "no",
+          "7": "yes",
           "8": "no",
           "9": "no",
           "10": "yes",
@@ -37,7 +37,7 @@
           "4": "yes",
           "5": "yes",
           "6": "yes",
-          "7": "no",
+          "7": "yes",
           "8": "no",
           "9": "yes",
           "10": "yes",
@@ -63,7 +63,7 @@
           "4": "yes",
           "5": "yes",
           "6": "yes",
-          "7": "no",
+          "7": "yes",
           "8": "no",
           "9": "no",
           "10": "no",
@@ -77,7 +77,7 @@
           "18": "no",
           "19": "no",
           "20": "no",
-          "21": "yes",
+          "21": "first",
           "22": "yes",
           "23": "yes",
           "24": "yes"
@@ -103,7 +103,7 @@
           "18": "no",
           "19": "no",
           "20": "no",
-          "21": "first",
+          "21": "yes",
           "22": "yes",
           "23": "yes",
           "24": "yes"
@@ -141,7 +141,7 @@
           "4": "yes",
           "5": "yes",
           "6": "yes",
-          "7": "second",
+          "7": "yes",
           "8": "no",
           "9": "no",
           "10": "no",
@@ -318,7 +318,7 @@
         }
       }
     },
-    "update": "21.11.2026 01:18",
+    "update": "21.11.2026 01:20",
     "today": 1795212000
   },
   "preset": {
@@ -2695,19 +2695,19 @@
         }
       }
     },
-    "updateFact": "21.11.2026 01:18"
+    "updateFact": "21.11.2026 01:20"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-20T23:20:50.233Z",
-    "attempt": 54256
+    "at": "2026-11-20T23:25:38.547Z",
+    "attempt": 54257
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "cba7a95bf355bd59ddde2689d7f9a8a54b4bdca2303745ba4c6dae745a451c0f"
+    "contentHash": "c735f4c7a654c4f7071f2f1435ae3da562e9c77057bf4e914cdf0a37ad839971"
   },
   "emergency": {
     "active": false,
