@@ -1,6 +1,6 @@
 {
   "regionId": "kyiv-region",
-  "lastUpdated": "2026-11-20T05:30:45.204Z",
+  "lastUpdated": "2026-11-20T05:35:40.202Z",
   "fact": {
     "data": {
       "1795125600": {
@@ -65,10 +65,10 @@
           "6": "yes",
           "7": "yes",
           "8": "yes",
-          "9": "yes",
-          "10": "yes",
-          "11": "yes",
-          "12": "yes",
+          "9": "no",
+          "10": "no",
+          "11": "no",
+          "12": "first",
           "13": "yes",
           "14": "yes",
           "15": "yes",
@@ -90,11 +90,11 @@
           "5": "yes",
           "6": "yes",
           "7": "yes",
-          "8": "yes",
-          "9": "yes",
-          "10": "yes",
-          "11": "yes",
-          "12": "yes",
+          "8": "second",
+          "9": "no",
+          "10": "no",
+          "11": "no",
+          "12": "first",
           "13": "yes",
           "14": "yes",
           "15": "yes",
@@ -172,7 +172,7 @@
           "9": "yes",
           "10": "yes",
           "11": "yes",
-          "12": "yes",
+          "12": "no",
           "13": "yes",
           "14": "yes",
           "15": "yes",
@@ -198,7 +198,7 @@
           "9": "yes",
           "10": "yes",
           "11": "yes",
-          "12": "yes",
+          "12": "no",
           "13": "yes",
           "14": "yes",
           "15": "yes",
@@ -318,7 +318,7 @@
         }
       }
     },
-    "update": "20.11.2026 05:14",
+    "update": "20.11.2026 07:29",
     "today": 1795125600
   },
   "preset": {
@@ -2695,19 +2695,19 @@
         }
       }
     },
-    "updateFact": "20.11.2026 05:14"
+    "updateFact": "20.11.2026 07:29"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-20T05:30:45.204Z",
-    "attempt": 54042
+    "at": "2026-11-20T05:35:40.202Z",
+    "attempt": 54043
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "bd15179db4ceebb5cef7994f7f04c68a801e0aec66cfd9f17e46119f270d631c"
+    "contentHash": "717ba60d6ebbedabde344896b41dc3e3d44485ae9356d7d5603636b90206da41"
   },
   "emergency": {
     "active": false,
