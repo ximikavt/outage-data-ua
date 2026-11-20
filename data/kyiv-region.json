@@ -1,6 +1,6 @@
 {
   "regionId": "kyiv-region",
-  "lastUpdated": "2026-11-20T22:35:33.125Z",
+  "lastUpdated": "2026-11-20T22:40:33.639Z",
   "fact": {
     "data": {
       "1795212000": {
@@ -34,8 +34,8 @@
           "1": "yes",
           "2": "yes",
           "3": "yes",
-          "4": "yes",
-          "5": "yes",
+          "4": "second",
+          "5": "no",
           "6": "no",
           "7": "no",
           "8": "no",
@@ -87,7 +87,7 @@
           "2": "yes",
           "3": "yes",
           "4": "yes",
-          "5": "first",
+          "5": "yes",
           "6": "yes",
           "7": "no",
           "8": "no",
@@ -113,7 +113,7 @@
           "2": "yes",
           "3": "yes",
           "4": "yes",
-          "5": "second",
+          "5": "yes",
           "6": "yes",
           "7": "second",
           "8": "no",
@@ -164,7 +164,7 @@
           "1": "no",
           "2": "no",
           "3": "first",
-          "4": "second",
+          "4": "yes",
           "5": "yes",
           "6": "yes",
           "7": "yes",
@@ -297,7 +297,7 @@
           "4": "no",
           "5": "first",
           "6": "yes",
-          "7": "first",
+          "7": "yes",
           "8": "yes",
           "9": "yes",
           "10": "yes",
@@ -318,7 +318,7 @@
         }
       }
     },
-    "update": "21.11.2026 00:29",
+    "update": "21.11.2026 00:35",
     "today": 1795212000
   },
   "preset": {
@@ -2695,19 +2695,19 @@
         }
       }
     },
-    "updateFact": "21.11.2026 00:29"
+    "updateFact": "21.11.2026 00:35"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-20T22:35:33.125Z",
-    "attempt": 54247
+    "at": "2026-11-20T22:40:33.638Z",
+    "attempt": 54248
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "e0044cc5bf73493a2cd64fe26cb40e13f1fab38e4e91c6226c4181c54d9de7d9"
+    "contentHash": "50c22606fae3dfb0dd5ef4bb54a3cd6b7ddd1816c10cf165fa1e4ee9bcd9cd8b"
   },
   "emergency": {
     "active": false,
