@@ -1,6 +1,6 @@
 {
   "regionId": "kyiv-region",
-  "lastUpdated": "2026-11-21T10:15:47.935Z",
+  "lastUpdated": "2026-11-21T10:20:36.061Z",
   "fact": {
     "data": {
       "1795212000": {
@@ -25,8 +25,8 @@
           "18": "yes",
           "19": "second",
           "20": "no",
-          "21": "no",
-          "22": "no",
+          "21": "first",
+          "22": "yes",
           "23": "yes",
           "24": "yes"
         },
@@ -72,13 +72,13 @@
           "13": "yes",
           "14": "yes",
           "15": "yes",
-          "16": "no",
-          "17": "no",
-          "18": "no",
-          "19": "no",
+          "16": "yes",
+          "17": "yes",
+          "18": "yes",
+          "19": "second",
           "20": "no",
-          "21": "yes",
-          "22": "yes",
+          "21": "no",
+          "22": "no",
           "23": "yes",
           "24": "yes"
         },
@@ -103,7 +103,7 @@
           "18": "no",
           "19": "no",
           "20": "no",
-          "21": "first",
+          "21": "yes",
           "22": "yes",
           "23": "yes",
           "24": "yes"
@@ -251,10 +251,10 @@
           "10": "yes",
           "11": "yes",
           "12": "second",
-          "13": "no",
-          "14": "no",
-          "15": "no",
-          "16": "first",
+          "13": "first",
+          "14": "yes",
+          "15": "yes",
+          "16": "yes",
           "17": "yes",
           "18": "yes",
           "19": "yes",
@@ -318,7 +318,7 @@
         }
       }
     },
-    "update": "21.11.2026 09:17",
+    "update": "21.11.2026 12:13",
     "today": 1795212000
   },
   "preset": {
@@ -2695,19 +2695,19 @@
         }
       }
     },
-    "updateFact": "21.11.2026 09:17"
+    "updateFact": "21.11.2026 12:13"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-21T10:15:47.935Z",
-    "attempt": 54387
+    "at": "2026-11-21T10:20:36.061Z",
+    "attempt": 54388
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "4345b28fa929c109fb89e4cd3d5a9b75cda785bbde3d21ac2d3f6c12e6fd7a50"
+    "contentHash": "1fb5dccaddf44126ca55ba84da1bf4fc4f9929be9b092c35a914ebaf6b253d55"
   },
   "emergency": {
     "active": false,
