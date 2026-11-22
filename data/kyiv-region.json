@@ -1,6 +1,6 @@
 {
   "regionId": "kyiv-region",
-  "lastUpdated": "2026-11-22T13:15:49.883Z",
+  "lastUpdated": "2026-11-22T13:20:31.973Z",
   "fact": {
     "data": {
       "1795298400": {
@@ -20,7 +20,7 @@
           "13": "first",
           "14": "yes",
           "15": "yes",
-          "16": "yes",
+          "16": "no",
           "17": "yes",
           "18": "yes",
           "19": "yes",
@@ -105,8 +105,8 @@
           "20": "yes",
           "21": "yes",
           "22": "yes",
-          "23": "yes",
-          "24": "yes"
+          "23": "second",
+          "24": "no"
         },
         "GPV3.1": {
           "1": "yes",
@@ -124,11 +124,11 @@
           "13": "yes",
           "14": "yes",
           "15": "yes",
-          "16": "yes",
-          "17": "yes",
-          "18": "yes",
-          "19": "yes",
-          "20": "yes",
+          "16": "second",
+          "17": "no",
+          "18": "no",
+          "19": "no",
+          "20": "first",
           "21": "yes",
           "22": "yes",
           "23": "yes",
@@ -258,10 +258,10 @@
           "17": "yes",
           "18": "yes",
           "19": "yes",
-          "20": "yes",
-          "21": "yes",
-          "22": "yes",
-          "23": "yes",
+          "20": "no",
+          "21": "no",
+          "22": "no",
+          "23": "no",
           "24": "yes"
         },
         "GPV6.1": {
@@ -318,7 +318,7 @@
         }
       }
     },
-    "update": "22.11.2026 12:58",
+    "update": "22.11.2026 15:17",
     "today": 1795298400
   },
   "preset": {
@@ -2695,19 +2695,19 @@
         }
       }
     },
-    "updateFact": "22.11.2026 12:58"
+    "updateFact": "22.11.2026 15:17"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-22T13:15:49.883Z",
-    "attempt": 54710
+    "at": "2026-11-22T13:20:31.973Z",
+    "attempt": 54711
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "01dc5dcd48e9ffbe121cd50847c41e040761a3651e00e1128cc73c30c0a3375f"
+    "contentHash": "fb5a6a3f53c575c0bff2cbba67d0aa6acbe1b98417363f6ee28f1a0ee1f23a58"
   },
   "emergency": {
     "active": false,
