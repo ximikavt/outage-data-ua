@@ -1,6 +1,6 @@
 {
   "regionId": "kyiv-region",
-  "lastUpdated": "2026-11-23T19:35:48.926Z",
+  "lastUpdated": "2026-11-23T19:40:39.356Z",
   "fact": {
     "data": {
       "1795384800": {
@@ -234,8 +234,8 @@
           "19": "no",
           "20": "no",
           "21": "no",
-          "22": "no",
-          "23": "no",
+          "22": "first",
+          "23": "yes",
           "24": "yes"
         },
         "GPV5.2": {
@@ -313,12 +313,12 @@
           "20": "no",
           "21": "yes",
           "22": "yes",
-          "23": "second",
-          "24": "no"
+          "23": "yes",
+          "24": "yes"
         }
       }
     },
-    "update": "23.11.2026 19:42",
+    "update": "23.11.2026 21:38",
     "today": 1795384800
   },
   "preset": {
@@ -2695,19 +2695,19 @@
         }
       }
     },
-    "updateFact": "23.11.2026 19:42"
+    "updateFact": "23.11.2026 21:38"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-23T19:35:48.925Z",
-    "attempt": 55070
+    "at": "2026-11-23T19:40:39.356Z",
+    "attempt": 55071
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "8de2c2d7bf81fa08537d2c1b6f4e106ad017c9add13e736043047bc4d773cdfb"
+    "contentHash": "d46405ac2ecb7cc3d7f5170f7250b46c574f5c89faf3a0d5f12601b4ee972342"
   },
   "emergency": {
     "active": false,
