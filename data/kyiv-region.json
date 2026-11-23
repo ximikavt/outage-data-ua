@@ -1,6 +1,6 @@
 {
   "regionId": "kyiv-region",
-  "lastUpdated": "2026-11-23T21:05:45.300Z",
+  "lastUpdated": "2026-11-23T21:10:39.166Z",
   "fact": {
     "data": {
       "1795384800": {
@@ -424,8 +424,8 @@
         },
         "GPV3.1": {
           "1": "no",
-          "2": "no",
-          "3": "first",
+          "2": "yes",
+          "3": "yes",
           "4": "yes",
           "5": "yes",
           "6": "yes",
@@ -449,9 +449,9 @@
           "24": "yes"
         },
         "GPV3.2": {
-          "1": "yes",
-          "2": "yes",
-          "3": "yes",
+          "1": "no",
+          "2": "no",
+          "3": "first",
           "4": "yes",
           "5": "yes",
           "6": "yes",
@@ -632,7 +632,7 @@
         }
       }
     },
-    "update": "23.11.2026 22:33",
+    "update": "23.11.2026 23:06",
     "today": 1795384800
   },
   "preset": {
@@ -3009,19 +3009,19 @@
         }
       }
     },
-    "updateFact": "23.11.2026 22:33"
+    "updateFact": "23.11.2026 23:06"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-23T21:05:45.300Z",
-    "attempt": 55088
+    "at": "2026-11-23T21:10:39.166Z",
+    "attempt": 55089
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "a387dfb2efc709337186195e159628e4970fb16c5294843f301a99fa067c5943"
+    "contentHash": "b5e54714fb6bfaeaedeae6fff9d1f988b89a3ad4d0c8b4a3298ada423676f200"
   },
   "emergency": {
     "active": false,
