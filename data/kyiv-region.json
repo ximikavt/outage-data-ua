@@ -1,6 +1,6 @@
 {
   "regionId": "kyiv-region",
-  "lastUpdated": "2026-11-23T17:40:33.812Z",
+  "lastUpdated": "2026-11-23T17:45:42.266Z",
   "fact": {
     "data": {
       "1795384800": {
@@ -28,7 +28,7 @@
           "21": "no",
           "22": "no",
           "23": "no",
-          "24": "yes"
+          "24": "no"
         },
         "GPV1.2": {
           "1": "yes",
@@ -106,7 +106,7 @@
           "21": "second",
           "22": "no",
           "23": "no",
-          "24": "second"
+          "24": "no"
         },
         "GPV3.1": {
           "1": "yes",
@@ -131,7 +131,7 @@
           "20": "yes",
           "21": "yes",
           "22": "yes",
-          "23": "yes",
+          "23": "second",
           "24": "no"
         },
         "GPV3.2": {
@@ -236,7 +236,7 @@
           "21": "no",
           "22": "no",
           "23": "no",
-          "24": "first"
+          "24": "yes"
         },
         "GPV5.2": {
           "1": "yes",
@@ -288,7 +288,7 @@
           "21": "no",
           "22": "no",
           "23": "no",
-          "24": "no"
+          "24": "yes"
         },
         "GPV6.2": {
           "1": "yes",
@@ -313,12 +313,12 @@
           "20": "no",
           "21": "yes",
           "22": "yes",
-          "23": "yes",
+          "23": "second",
           "24": "no"
         }
       }
     },
-    "update": "23.11.2026 19:35",
+    "update": "23.11.2026 19:42",
     "today": 1795384800
   },
   "preset": {
@@ -2695,19 +2695,19 @@
         }
       }
     },
-    "updateFact": "23.11.2026 19:35"
+    "updateFact": "23.11.2026 19:42"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-23T17:40:33.812Z",
-    "attempt": 55047
+    "at": "2026-11-23T17:45:42.266Z",
+    "attempt": 55048
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "f16ccf2a16f97981a2ffa7c9b27ada6a04daa31da6cc2edec14276727f8189da"
+    "contentHash": "8de2c2d7bf81fa08537d2c1b6f4e106ad017c9add13e736043047bc4d773cdfb"
   },
   "emergency": {
     "active": false,
