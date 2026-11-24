@@ -1,6 +1,6 @@
 {
   "regionId": "kyiv-region",
-  "lastUpdated": "2026-11-24T23:30:39.539Z",
+  "lastUpdated": "2026-11-24T23:35:32.935Z",
   "fact": {
     "data": {
       "1795557600": {
@@ -215,11 +215,11 @@
         "GPV5.1": {
           "1": "yes",
           "2": "yes",
-          "3": "yes",
-          "4": "yes",
-          "5": "yes",
-          "6": "yes",
-          "7": "yes",
+          "3": "second",
+          "4": "no",
+          "5": "no",
+          "6": "no",
+          "7": "first",
           "8": "yes",
           "9": "yes",
           "10": "second",
@@ -228,8 +228,8 @@
           "13": "no",
           "14": "no",
           "15": "no",
-          "16": "no",
-          "17": "first",
+          "16": "yes",
+          "17": "yes",
           "18": "yes",
           "19": "yes",
           "20": "yes",
@@ -241,11 +241,11 @@
         "GPV5.2": {
           "1": "yes",
           "2": "yes",
-          "3": "yes",
-          "4": "yes",
-          "5": "yes",
-          "6": "yes",
-          "7": "yes",
+          "3": "second",
+          "4": "no",
+          "5": "no",
+          "6": "no",
+          "7": "first",
           "8": "yes",
           "9": "yes",
           "10": "second",
@@ -254,8 +254,8 @@
           "13": "no",
           "14": "no",
           "15": "no",
-          "16": "no",
-          "17": "first",
+          "16": "yes",
+          "17": "yes",
           "18": "yes",
           "19": "yes",
           "20": "yes",
@@ -280,8 +280,8 @@
           "13": "no",
           "14": "no",
           "15": "no",
-          "16": "yes",
-          "17": "second",
+          "16": "no",
+          "17": "no",
           "18": "yes",
           "19": "yes",
           "20": "yes",
@@ -306,8 +306,8 @@
           "13": "no",
           "14": "no",
           "15": "no",
-          "16": "yes",
-          "17": "second",
+          "16": "no",
+          "17": "no",
           "18": "yes",
           "19": "yes",
           "20": "yes",
@@ -318,7 +318,7 @@
         }
       }
     },
-    "update": "25.11.2026 00:30",
+    "update": "25.11.2026 01:33",
     "today": 1795557600
   },
   "preset": {
@@ -2695,19 +2695,19 @@
         }
       }
     },
-    "updateFact": "25.11.2026 00:30"
+    "updateFact": "25.11.2026 01:33"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-24T23:30:39.539Z",
-    "attempt": 55403
+    "at": "2026-11-24T23:35:32.935Z",
+    "attempt": 55404
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "9a990f383ae4f281af31a0d39e0712bd8d0f30214086a2ff13192f9696ce9e6d"
+    "contentHash": "6c7dbc0fcc02a638be0a83b1b358812add5875dcdff9cdc6391099e0fafde154"
   },
   "emergency": {
     "active": false,
