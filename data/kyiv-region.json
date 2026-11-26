@@ -1,11 +1,11 @@
 {
   "regionId": "kyiv-region",
-  "lastUpdated": "2026-11-26T22:05:36.357Z",
+  "lastUpdated": "2026-11-26T22:10:43.538Z",
   "fact": {
     "data": {
       "1795730400": {
         "GPV1.1": {
-          "1": "yes",
+          "1": "no",
           "2": "yes",
           "3": "yes",
           "4": "yes",
@@ -31,7 +31,7 @@
           "24": "yes"
         },
         "GPV1.2": {
-          "1": "yes",
+          "1": "no",
           "2": "yes",
           "3": "yes",
           "4": "yes",
@@ -57,7 +57,7 @@
           "24": "yes"
         },
         "GPV2.1": {
-          "1": "yes",
+          "1": "no",
           "2": "yes",
           "3": "yes",
           "4": "yes",
@@ -109,8 +109,8 @@
           "24": "yes"
         },
         "GPV3.1": {
-          "1": "yes",
-          "2": "yes",
+          "1": "second",
+          "2": "no",
           "3": "yes",
           "4": "yes",
           "5": "yes",
@@ -135,8 +135,8 @@
           "24": "no"
         },
         "GPV3.2": {
-          "1": "yes",
-          "2": "yes",
+          "1": "second",
+          "2": "no",
           "3": "yes",
           "4": "yes",
           "5": "yes",
@@ -187,8 +187,8 @@
           "24": "no"
         },
         "GPV4.2": {
-          "1": "yes",
-          "2": "yes",
+          "1": "second",
+          "2": "no",
           "3": "yes",
           "4": "yes",
           "5": "yes",
@@ -318,7 +318,7 @@
         }
       }
     },
-    "update": "26.11.2026 22:05",
+    "update": "27.11.2026 00:05",
     "today": 1795730400
   },
   "preset": {
@@ -2695,19 +2695,19 @@
         }
       }
     },
-    "updateFact": "26.11.2026 22:05"
+    "updateFact": "27.11.2026 00:05"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-26T22:05:36.357Z",
-    "attempt": 55955
+    "at": "2026-11-26T22:10:43.537Z",
+    "attempt": 55956
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "146626eb1316a0f4431133a21ee68f516c95f6881b9e49ea1ac30b55f464eab7"
+    "contentHash": "c0117a973e38996c68c0aae5c2cb21e7bf462e37420c6a1f4b3f2479c057a51f"
   },
   "emergency": {
     "active": false,
